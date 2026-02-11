@@ -1,0 +1,74 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background: linear-gradient(to bottom, #F5F5DC, #FFD700, #FFB6C1);
+    color: #8B4513;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 20px;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.falling-hearts::before, .falling-flowers::before {
+    content: '♥';
+    position: absolute;
+    font-size: 24px;
+    color: #FF0000;
+    animation: fall 10s linear infinite;
+    left: 10%;
+}
+
+.falling-hearts::after {
+    content: '❀';
+    position: absolute;
+    font-size: 20px;
+    color: #FFB6C1;
+    animation: fall 12s linear infinite;
+    left: 50%;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100vh); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+#envelope-selection button {
+    background: #FFD700;
+    border: 2px solid #8B4513;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#envelope {
+    margin: 20px auto;
+    width: 300px;
+}
+
+#message-paper {
+    background: #D2B48C;
+    border: 2px solid #FFD700;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    font-size: 18px;
+}
+
+#gallery img {
+    border: 5px solid #FFB6C1;
+    margin: 10px;
+    max-width: 200px;
+}
+
+.hidden { display: none; }
+
+#map-container { width: 100%; }

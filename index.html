@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Royal Valentine's Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background">
+        <div class="falling-hearts"></div>
+        <div class="falling-flowers"></div>
+    </div>
+    
+    <div id="envelope-selection">
+        <h2>Choose Your Royal Envelope</h2>
+        <button onclick="selectEnvelope(1)">Design 1: Gold Crest</button>
+        <button onclick="selectEnvelope(2)">Design 2: Pink Rose</button>
+        <button onclick="selectEnvelope(3)">Design 3: Beige Elegance</button>
+    </div>
+    
+    <div id="envelope" class="hidden">
+        <img id="envelope-img" src="envelope1.png" alt="Envelope" style="width:300px;">
+        <div id="wax-seal">
+            <select id="seal-select">
+                <option value="seal1.png">Royal Lion</option>
+                <option value="seal2.png">Heart Crown</option>
+                <option value="seal3.png">Floral Crest</option>
+            </select>
+            <button onclick="lockEnvelope()">Seal It</button>
+        </div>
+        <button onclick="openEnvelope()">Open</button>
+    </div>
+    
+    <div id="card-content" class="hidden">
+        <div id="message-paper">
+            <textarea id="personal-message" placeholder="Type your romantic message..."></textarea>
+        </div>
+        <button onclick="generatePoem()">Generate Secret Poem</button>
+        <div id="poem-display"></div>
+        
+        <div id="gallery">
+            <h3>Upload Cherished Photos</h3>
+            <input type="file" id="photo-upload" multiple>
+            <select id="border-select">
+                <option value="border1">Rose Border</option>
+                <option value="border2">Gold Vine</option>
+                <option value="border3">Pink Petals</option>
+            </select>
+            <div id="photo-display"></div>
+        </div>
+        
+        <div id="map">
+            <h3>Pin Your Favorite Memories</h3>
+            <div id="map-container" style="height:300px;"></div>
+        </div>
+        
+        <div id="countdown">Countdown to Valentine's: <span id="timer"></span></div>
+        
+        <button id="music-toggle" onclick="toggleMusic()">Play Soft Piano</button>
+        <audio id="piano-audio" src="soft-piano.mp3" loop></audio>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</body>
+</html>
